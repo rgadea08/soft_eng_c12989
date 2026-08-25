@@ -144,8 +144,76 @@
       </div>
 
     </section>
-    <hr style="opacity:0">
 
+    <section>
+      <tr>  </tr>
+      <h2 id="bookQuotes">Quotes from the Book</h2>
+      <div class="accordion">
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            On the Creation of the Trees
+          </button>
+          <div class="accordion-body hidden">
+            <p><i>"There came forth into the air the light of the Trees of Valinor, and it was date and hour when first they shone."</i></p>
+            <p class="source">— The Silmarillion, Chapter 1: "Of the Beginning of Days", p. 38</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            On the Destruction of the Trees
+          </button>
+          <div class="accordion-body hidden">
+            <p><i>"Dark now was Valinor, and silent, save for the sound of weeping."</i></p>
+            <p class="source">— The Silmarillion, Chapter 8: "Of the Darkening of Valinor", p. 76</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            On Melkor's Betrayal
+          </button>
+          <div class="accordion-body hidden">
+            <p><i>"So great was the fear that Ungoliant brought upon him that Melkor's spirit remained forever after in dread."</i></p>
+            <p class="source">— The Silmarillion, Chapter 8: "Of the Darkening of Valinor", p. 80</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 id="commentsSection">Leave a Comment</h2>
+
+      <form id="commentForm" novalidate>
+        <div class="form-group">
+          <label for="commenterName">Name:</label>
+          <input type="text" id="commenterName" name="commenterName">
+          <span class="error-msg" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="commenterEmail">Email:</label>
+          <input type="email" id="commenterEmail" name="commenterEmail">
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="commentText">Your comment or theory:</label>
+          <textarea id="commentText" name="commentText" rows="4"></textarea>
+          <span class="error-msg" id="commentError"></span>
+        </div>
+
+        <button type="submit">Submit Comment</button>
+      </form>
+
+      <p id="formSuccess" class="hidden">Thank you, your comment has been added below!</p>
+
+      <ul id="commentsList" class="comments-list"></ul>
+    </section>
+
+    <hr style="opacity:0">
     </main>
   <footer>
   <p>Raul Gadea Alfaro ~ 8/12/2026</p>

@@ -70,3 +70,80 @@ function openCharacterModal(characterId) {
 function closeCharacterModal() {
   document.getElementById('characterModal').classList.add('hidden');
 }
+
+function toggleAccordion(button) {
+  const body = button.nextElementSibling;
+  body.classList.toggle('hidden');
+  button.classList.toggle('open');
+}
+
+document.getElementById('commentForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  let isValid = true;
+
+  const nameInput = document.getElementById('commenterName');
+  const emailInput = document.getElementById('commenterEmail');
+  const commentInput = document.getElementById('commentText');
+
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const commentError = document.getElementById('commentError');
+
+  // Limpiar estado previo
+  [nameInput, emailInput, commentInput].forEach(function(input) {
+    input.classList.remove('invalid');
+  });
+  nameError.textContent = '';
+  emailError.textContent = '';
+  commentError.textContent = '';
+
+  // Validar nombre
+  if (nameInput.value.trim().length < 2) {
+    nameError.textContent = 'Please enter a name (at least 2 characters).';
+    nameInput.classList.add('invalid');
+    isValid = false;
+  }
+
+  // Validar email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    emailError.textContent = 'Please enter a valid email address.';
+    emailInput.classList.add('invalid');
+    isValid = false;
+  }
+
+  // Validar comentario
+  if (commentInput.value.trim().length < 10) {
+    commentError.textContent = 'Your comment must be at least 10 characters.';
+    commentInput.classList.add('invalid');
+    isValid = false;
+  }
+
+  if (isValid) {
+    addComment(nameInput.value.trim(), commentInput.value.trim());
+    document.getElementById('formSuccess').classList.remove('hidden');
+    this.reset();
+
+    setTimeout(function() {
+      document.getElementById('formSuccess').classList.add('hidden');
+    }, 3000);
+  }
+});
+
+function addComment(name, text) {
+  const list = document.getElementById('commentsList');
+
+  const item = document.createElement('li');
+  item.classList.add('comment-item');
+
+  const author = document.createElement('p');
+  author.classList.add('comment-author');
+  author.textContent = name;
+
+  const body = document.createElement('p');
+  body.textContent = text;
+
+  item.appendChild(author);
+  item.appendChild(body);
+  list.prepend(item);
+}
