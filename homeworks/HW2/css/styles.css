@@ -185,3 +185,33 @@ body.dark-mode blockquote {
 .tab-content.active {
   display: block;
 }
+
+.quote-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* muestra solo 3 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s;
+}
+
+.quote-preview.expanded {
+  -webkit-line-clamp: unset;    /* quita el límite de líneas */
+  display: block;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: rgb(68, 68, 68);
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Aniron", sans-serif;
+  font-size: 0.95rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+body.dark-mode .read-more-btn {
+  color: rgb(158, 203, 255);
+}
