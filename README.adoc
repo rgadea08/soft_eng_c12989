@@ -1,2 +1,6 @@
 = Software Engineering CI-0126
-Raul Gadea Alfaro C12989
+
+- Raul Gadea Alfaro C12989
+
+. Homework 1: HTML + CSS 
+. Homework 2: HTML + CSS + JavaScript
