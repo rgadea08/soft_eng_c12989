@@ -4,9 +4,12 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Silmarillion: The Two Trees of Valinor</title>
-  <link rel='stylesheet' href='styles.css'>
+  <link rel='stylesheet' href='css/styles.css'>
+  <script src="js/scripts.js" defer></script>
 </head>
+
 <body>
+
   <header id="top">
     <h1>The Two Trees of Valinor</h1>
     <nav>
@@ -14,37 +17,53 @@
       <a href="#creationAndDestruction">Creation & Destruction</a>
       <a href="#relatedIllustrations">Related Illustrations</a>
       <a href="#keyCharactersAndConcepts">Key Characters and Concepts</a>
+      <label class="dark-mode-switch">
+        <span class="icon">☀</span>
+        <span class="switch-track">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </span>
+        <span class="icon">☾</span>
+      </label>
     </nav>
-    <label class="dark-mode-switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
-    </label>
   </header>
+
   <main>
+  
     <div class="image-wrapper">
       <img src="TelperionAndLaurelin.jpg" alt="Telperion and Laurelin">
     </div>
-    <section>
-      <h2 id="telperionAndLaurelin"> Telperion and Laurelin</h2>
-      <blockquote cite="https://lotr.fandom.com/wiki/Two_Trees_of_Valinor">
-        <i>"The Two Trees of Valinor, also known as the Trees of the Valar, were Laurelin (the Gold Tree) 
-        and Telperion (the Silver Tree), which brought light into the land of the Valar in ancient times.
-        They were destroyed by Melkor and the primal spider Ungoliant, but their last flower and fruit
-        were made by the Valar into the Sun and the Moon." <cite>(The Lord of the Rings Wiki, 2026)</cite></i>
-    </blockquote>
+
+    <section class="tabs-section">
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="showTab('telperionAndLaurelin', this)">Telperion and Laurelin</button>
+        <button class="tab-btn" onclick="showTab('creationAndDestruction', this)">Creation & Destruction</button>
+      </div>
+      
+      <div id="telperionAndLaurelin" class="tab-content active">
+        <h2>Telperion and Laurelin</h2>
+        <blockquote cite="https://lotr.fandom.com/wiki/Two_Trees_of_Valinor">
+          <i>"The Two Trees of Valinor, also known as the Trees of the Valar, were Laurelin (the Gold Tree) 
+          and Telperion (the Silver Tree), which brought light into the land of the Valar in ancient times.
+          They were destroyed by Melkor and the primal spider Ungoliant, but their last flower and fruit
+          were made by the Valar into the Sun and the Moon." <cite>(The Lord of the Rings Wiki, 2026)</cite></i>
+       </blockquote>
+      </div>
+
+      <div>
+        <h2 id="creationAndDestruction">Creation & Destruction</h2>
+        <blockquote cite="https://lotr.fandom.com/wiki/Two_Trees_of_Valinor">
+          <i>"The first sources of light for all of Arda were two enormous Lamps: Illuin, the silver one to the north,
+          and Ormal, the golden one to the south. These were cast down and destroyed by Melkor.
+          Afterward, the Valar went to Valinor and Yavanna sang into existence the Two Trees, 
+          silver Telperion and golden Laurelin. Telperion was considered male and Laurelin female.
+          The Trees sat on the hill Ezellohar located outside Valmar.
+          They grew in the presence of all of the Valar, watered by the tears of Nienna."
+          <cite>(The Lord of the Rings Wiki, 2026)</cite></i>
+        </blockquote>
+      </div>
     </section>
-    <section>
-      <h2 id="creationAndDestruction">Creation & Destruction</h2>
-      <blockquote cite="https://lotr.fandom.com/wiki/Two_Trees_of_Valinor">
-        <i>"The first sources of light for all of Arda were two enormous Lamps: Illuin, the silver one to the north,
-        and Ormal, the golden one to the south. These were cast down and destroyed by Melkor.
-        Afterward, the Valar went to Valinor and Yavanna sang into existence the Two Trees, 
-        silver Telperion and golden Laurelin. Telperion was considered male and Laurelin female.
-        The Trees sat on the hill Ezellohar located outside Valmar.
-        They grew in the presence of all of the Valar, watered by the tears of Nienna."
-      <cite>(The Lord of the Rings Wiki, 2026)</cite></i>
-      </blockquote>
-    </section>
+
     <section>
       <h2 id="relatedIllustrations"> Related Illustrations</h2>
       <div class="image-wrapper">
@@ -53,6 +72,7 @@
           <figcaption>Morgoth / Melkor</figcaption>
         </figure>
       </div>
+
       <hr style="opacity:0">
         <div class="image-wrapper">
           <figure>
@@ -60,6 +80,7 @@
             <figcaption>Ungoliant and Melkor</figcaption>
         </figure>
       </div>
+
       <hr style="opacity:0">
       <div class="image-wrapper">
         <figure>
@@ -67,6 +88,7 @@
           <figcaption>Ungoliant vs Morgoth</figcaption>
         </figure>
       </div>
+
       <section>
         <h2 id="keyCharactersAndConcepts">Key Characters and Concepts</h2>
         <ul>
@@ -78,8 +100,10 @@
         </ul>
         <a href="https://lotr.fandom.com/wiki/Main_Page"> Visit the Lord of the Rings Fandom Wiki</a>
       </section>
+
     </section>
     <hr style="opacity:0">
+
     </main>
   <footer>
   <p>Raul Gadea Alfaro ~ 8/12/2026</p>
