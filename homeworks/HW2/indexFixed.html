@@ -13,8 +13,8 @@
   <header id="top">
     <h1>The Two Trees of Valinor</h1>
     <nav>
-      <a href="#telperionAndLaurelin">Telperion and Laurelin</a>
-      <a href="#creationAndDestruction">Creation & Destruction</a>
+      <a href="#tabsSection" onclick="activateTab('telperionAndLaurelin')">Telperion and Laurelin</a>
+      <a href="#tabsSection" onclick="activateTab('creationAndDestruction')">Creation & Destruction</a>
       <a href="#relatedIllustrations">Related Illustrations</a>
       <a href="#keyCharactersAndConcepts">Key Characters and Concepts</a>
       <label class="dark-mode-switch">
@@ -34,10 +34,10 @@
       <img src="TelperionAndLaurelin.jpg" alt="Telperion and Laurelin">
     </div>
 
-    <section class="tabs-section">
+    <section id="tabsSection" class="tabs-section">
       <div class="tabs-nav">
-        <button class="tab-btn active" onclick="showTab('telperionAndLaurelin', this)">Telperion and Laurelin</button>
-        <button class="tab-btn" onclick="showTab('creationAndDestruction', this)">Creation & Destruction</button>
+        <button class="tab-btn active" data-tab="telperionAndLaurelin" onclick="activateTab('telperionAndLaurelin')">Telperion and Laurelin</button>
+        <button class="tab-btn" data-tab="creationAndDestruction" onclick="activateTab('creationAndDestruction')">Creation & Destruction</button>
       </div>
       
       <div id="telperionAndLaurelin" class="tab-content active">
@@ -50,8 +50,8 @@
        </blockquote>
       </div>
 
-      <div>
-        <h2 id="creationAndDestruction">Creation & Destruction</h2>
+      <div id="creationAndDestruction" class="tab-content">
+        <h2>Creation & Destruction</h2>
         <blockquote cite="https://lotr.fandom.com/wiki/Two_Trees_of_Valinor">
           <i>"The first sources of light for all of Arda were two enormous Lamps: Illuin, the silver one to the north,
           and Ormal, the golden one to the south. These were cast down and destroyed by Melkor.
