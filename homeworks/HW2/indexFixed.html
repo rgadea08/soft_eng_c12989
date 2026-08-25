@@ -125,15 +125,23 @@
 
       <section>
         <h2 id="keyCharactersAndConcepts">Key Characters and Concepts</h2>
-        <ul>
-          <li>Yavanna: The Vala associated with the creation and care of the Two Trees</li>
-          <li>Eru Iluvatar: The supreme being and creator of the universe</li>
-          <li>The Two Lamps: The initial sources of light before the creation of the Trees</li>
-          <li>Ungoliant: The primal spider that destroyed the Two Trees</li>
-          <li>Melkor/Morgoth: The fallen Vala who orchestrated the destruction of the Trees</li>
+        <ul class="character-list">
+          <li><button class="character-btn" onclick="openCharacterModal('yavanna')">Yavanna</button></li>
+          <li><button class="character-btn" onclick="openCharacterModal('eruIluvatar')">Eru Ilúvatar</button></li>
+          <li><button class="character-btn" onclick="openCharacterModal('twoLamps')">The Two Lamps</button></li>
+          <li><button class="character-btn" onclick="openCharacterModal('ungoliant')">Ungoliant</button></li>
+          <li><button class="character-btn" onclick="openCharacterModal('melkor')">Melkor/Morgoth</button></li>
         </ul>
         <a href="https://lotr.fandom.com/wiki/Main_Page"> Visit the Lord of the Rings Fandom Wiki</a>
       </section>
+
+      <div id="characterModal" class="modal hidden" onclick="closeCharacterModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="modal-close" onclick="closeCharacterModal()">&times;</span>
+          <h3 id="modalTitle"></h3>
+          <p id="modalText"></p>
+        </div>
+      </div>
 
     </section>
     <hr style="opacity:0">

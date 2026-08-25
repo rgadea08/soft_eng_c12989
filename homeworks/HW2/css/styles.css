@@ -301,3 +301,73 @@ nav {
   margin-top: 1rem;
   font-size: 1.1rem;
 }
+
+.character-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.character-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Aniron", sans-serif;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.character-btn:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+body.dark-mode .character-btn {
+  background-color: rgb(42, 42, 42);
+  color: rgb(238, 238, 238);
+}
+
+body.dark-mode .character-btn:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+body.dark-mode .modal-content {
+  background: rgb(42, 42, 42);
+  color: rgb(238, 238, 238);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
